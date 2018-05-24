@@ -6,7 +6,7 @@
  });
 
  const messaging = firebase.messaging();
- const applicationKey = '4922:m85m6aT13Et3qdXNTnT41ttTkgsN40Y4';
+ const applicationKey = '6174:ufEVuCpc22NvFXP6bIcIoQEbaGcRd0mA';
 
 messaging.setBackgroundMessageHandler(function(payload) 
 {
@@ -72,8 +72,7 @@ function showNotification(payload)
         var date = new Date();
         var data = {
             "ApplicationId": applicationKey,
-            "PushId": payload.data.OFSYSReceptionID,
-            "dtReception": '' + date.getFullYear() + '.' + (date.getMonth() + 1) + '.' + date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds() + 'z'
+            "PushId": payload.data.OFSYSReceptionID
         };
 
         corsAjax({
